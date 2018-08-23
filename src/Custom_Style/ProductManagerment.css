@@ -1,0 +1,28 @@
+.product-managerment
+{
+    float: left;
+    text-align: center;
+    font: inherit;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+.btn-add-to-card
+{
+    padding: 20px 0px;
+    border: 1px solid #cdbc7a;
+    background: #000e22;
+    line-height: 16px;
+    color: #cdbc7a!important;
+    width: 80%;
+    letter-spacing: .2em;
+    align-items: center;
+    text-transform: uppercase;
+   
+}
+.btn-add-to-card:hover
+{
+    background: #cdbc7a;
+    color: #000e22!important;
+}
