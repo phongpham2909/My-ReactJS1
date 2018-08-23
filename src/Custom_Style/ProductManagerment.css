@@ -2,10 +2,6 @@
 {
     float: left;
     text-align: center;
-    font: inherit;
-    margin: 0;
-    padding: 0;
-    line-height: 1.2;
     text-transform: uppercase;
 }
 .btn-add-to-card

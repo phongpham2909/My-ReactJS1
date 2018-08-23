@@ -1,18 +1,33 @@
 import React, { Component } from 'react';
 import queryString from 'query-string';
 import DataUtils from '../Util/DataUtils';
-import { Grid, Row, Col, Image, ListGroup, ListGroupItem, Button } from 'react-bootstrap';
+import { Grid, Row, Col, Image, ListGroup, ListGroupItem, Button,FormGroup,ControlLabel,FormControl,HelpBlock,Panel } from 'react-bootstrap';
 import '../Custom_Style/ProductDetail.css';
 
 import CurrencyFormat from 'react-currency-format';
+function FieldGroup({ id, label, help, ...props }) {
+    return (
+      <FormGroup controlId={id}>
+        <ControlLabel>{label}</ControlLabel>
+        <FormControl {...props} />
+        {help && <HelpBlock>{help}</HelpBlock>}
+      </FormGroup>
+    );
+  }
+
 
 class ProductDetail extends Component {
     constructor(props) {
         super(props);
-        this.state = { Id: null, info: null }
+        this.state = { Id: null, info: null, isEdit: false }
         
         this.state.Id = this.getIdFromQueryString();
         this.state.info = this.getProduct();
+    }
+
+    onEdit()
+    {
+        this.setState({isEdit: true})
     }
 
     getProduct() {
@@ -22,12 +37,66 @@ class ProductDetail extends Component {
         }
         return product;
     }
+   /* componentDidUpdate()
+    {
+        window.jQuery(".images-product").elevateZoom(
+            {zoomWindowPosition: 1, borderSize: 1, zoomWindowFadeIn: 500, zoomWindowFadeOut: 750}
+        );
+    }*/
+    buildEditProductTemplate()
+    {   
+        const formInstance = (
+                <form>
+                <FieldGroup
+                  id="formControlsName"
+                  type="text"
+                  label="Product Name"
+                  placeholder="Enter text"
+                  defaultValue={this.state.info.name}
+                />
+                <FieldGroup
+                  id="formControlsImage"
+                  type="text"
+                  label="Product Image"
+                  placeholder="Enter Image"
+                  defaultValue={this.state.info.img}
+                />
+                <FieldGroup
+                  id="formControlsCatalog"
+                  type="text"
+                  label="Product Catalog"
+                  defaultValue={this.state.info.type}
+                />
+                  <FieldGroup
+                  id="formControlsBrand"
+                  type="text"
+                  label="Product Brand"
+                  defaultValue={this.state.info.company}
+                />
+                <FieldGroup
+                  id="formControlsSaleOff"
+                  type="number"
+                  label="Sale Off"
+                  defaultValue={this.state.info.saleoff}
+                />
+                  <FieldGroup
+                  id="formControlsTextarea"
+                  type="text"
+                  label="Description"
+                  placeholder="Điền nội dung mô tả sản phẩm"
+                  defaultValue={this.state.info.description}
+                />            
+                <Button type="submit" >Submit</Button>
+              </form>
+        );
+        return formInstance;
+    }
     buildProductImage() {
         let imageTemplate = [];
         if (this.state.info !== null) {
             imageTemplate.push(
                 <div key={1}>
-                    <Image src={this.state.info.img} responsive />
+                  <Image className="images-product" src={this.state.info.img} responsive />
                 </div>
             )
         }
@@ -65,6 +134,7 @@ class ProductDetail extends Component {
                         </ListGroupItem>
                     </ListGroup>
                     <Button className="btn-add-to-card">Mua Ngay</Button>
+                    <Button type="button" onClick={this.onEdit.bind(this)}>Edit</Button>
                 </div>
             )
         }
@@ -174,6 +244,29 @@ class ProductDetail extends Component {
     }
 
     render() {
+        if(this.state.isEdit === true)
+        {
+        let editProductTemplate = this.buildEditProductTemplate();
+
+        return (
+            <div>
+                <Panel bsStyle="primary">
+                    <Panel.Heading>
+                        <Panel.Title componentClass="h3">Edit Product</Panel.Title>
+                    </Panel.Heading>
+                    <Panel.Body><Grid fluid={false}>
+                        <Row>
+                            <Col className="product-edit" xs={12} sm={12} md={12}>
+                            {editProductTemplate}
+                            </Col>
+                        </Row>
+                        </Grid></Panel.Body>
+                </Panel>
+            </div>
+        );
+        }
+
+
         let imageTemplate = this.buildProductImage();
         let productDetail = this.buildProductDetail();
         let descriptionTemplate = this.buildDescription();
@@ -182,7 +275,7 @@ class ProductDetail extends Component {
             <div>
                 <Grid fluid={true}>
                     <Row className="product-detail-main">
-                        <Col xs={12} sm={12} md={12} lg={12}>
+                        <Col xs={12} sm={12} md={12}>
                             <Row className="product-detail">
                                 <Col className="product-detail-img" xs={12} sm={12} md={6}>
                                     {imageTemplate}
@@ -195,7 +288,7 @@ class ProductDetail extends Component {
                     </Row>
                     <br />
                     <Row className="product-description-main">
-                        <Col xs={12} sm={12} md={12} lg={12}>
+                        <Col xs={12} sm={12} md={12}>
                             <Row className="product-description">
                                 <Col xs={12} sm={12} md={6}>
                                     {productDescriptionShipping}

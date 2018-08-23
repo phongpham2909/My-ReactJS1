@@ -82,7 +82,7 @@ class HeaderForm extends Component {
             <Navbar key= {1 }inverse collapseOnSelect>
               <Navbar.Header>
                 <Navbar.Brand>
-                  <a href="/">Phong Store</a>
+                  <a href="/">PHONG SWATCH</a>
                 </Navbar.Brand>
                 <Navbar.Toggle />
               </Navbar.Header>

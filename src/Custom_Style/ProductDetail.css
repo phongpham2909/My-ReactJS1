@@ -12,6 +12,13 @@
     {
         margin: 30px 5px;
     } 
+}
+@media (min-width: 992px)
+{
+    .product-detail
+    {
+        margin: 60px 160px;
+    } 
 }  
 .product-detail-des li 
 {
@@ -76,14 +83,14 @@
 {
     border-bottom: 1px solid #dadada;
     padding: 4px 0px ;
-    line-height: 2.2;
+    line-height: 2.2em;
     margin: 0px 5px;
 }
 .line-detail-des
 {
     margin: 0px 5px;
-    line-height: 24px;
-    padding: 8px 0px;
+    line-height: 2.2em;
+    padding: 4px 0px;
 }
 .btn-add-to-card
 {
