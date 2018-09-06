@@ -1,0 +1,25 @@
+.product
+{
+    text-align: center;
+}
+
+.btn-add-to-card
+{
+    padding: 15px 0px;
+    border: 1px solid #cdbc7a;
+    background: #000e22;
+    line-height: 16px;
+    color: #cdbc7a!important;
+    width: 80%;
+    letter-spacing: .2em;
+    align-items: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+   
+}
+
+.product-item-price .real-price span
+{   
+    opacity: 0.8;
+    text-decoration: line-through;
+}

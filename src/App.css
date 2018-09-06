@@ -1,19 +1,17 @@
 .App {
   height: 100vh !important;
   display: flex !important;
-  color: white !important;
+  color: white;
 }
 
 .App__Aside {
-  width: 50% !important;
-  background-color: #66DAC7 !important;
+  background-color: #66DAC7;
 }
 
 .App__Form {
-  width: 50% !important;
-  background-color: #2E4158 !important;
+  background-color: #2E4158;
   padding: 25px 40px !important;
-  overflow: auto !important;
+  overflow: auto;
 }
 
 .PageSwitcher {
@@ -23,7 +21,7 @@
 }
 
 .PageSwitcher__Item {
-  background-color: #4C5D72 !important;
+  background-color: #4C5D72;
   color: #9DA6B1 !important;
   padding: 10px 25px !important;
   cursor: pointer !important;
@@ -35,7 +33,7 @@
 }
 
 .PageSwitcher__Item--Active {
-  background-color: #5ED0C0 !important;
+  background-color: #5ED0C0;
   color: white !important;   
 }
 
@@ -53,7 +51,7 @@
 }
 
 .FormTitle {
-  color: #707C8B !important;
+  color: #707C8B;
   font-weight: 300 !important;
   margin-bottom: 50px !important;
 }
@@ -143,4 +141,12 @@
 
 .panel {
   border-radius: none;
+}
+
+@media (max-width: 768px){
+  .FormField__Link
+  {
+      margin-top: 20px;
+      margin-left: 5px;
+  } 
 }

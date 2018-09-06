@@ -1,0 +1,36 @@
+.product-img
+{
+    width: 100px;
+    height: 100px;
+}
+.btn-product-primary
+{
+    padding: 10px 10px;
+    border: 1px solid #cdbc7a;
+    background-color: #000e22;
+    line-height: 16px;
+    color: #cdbc7a !important;
+    letter-spacing: .2em;
+    justify-content: center;
+    min-width: 150px;
+    font-size: 12px;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+.btn-product-primary:hover
+{
+    background-color: #000e22;
+}
+.btn-create-new-product
+{
+    margin-bottom: 10px;
+    padding: auto;
+}
+.vertical-product.table>tbody>tr>td
+{
+    vertical-align: middle;
+}
+.vertical-product
+{
+    margin-bottom: -10px;
+}

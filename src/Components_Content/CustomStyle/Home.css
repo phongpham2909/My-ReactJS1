@@ -1,0 +1,118 @@
+.img-slider
+{
+    margin-top: -20px;
+}
+.img-slider-style
+{
+    width: 100%;
+    height: 75vh !important; 
+    object-fit: none;
+    object-position: center;
+    position: relative;
+    object-fit: cover;
+  
+}
+.carousel-control.left
+{
+    background-image: none;
+}
+.carousel-control.right
+{
+    background-image: none;
+}
+.splash
+{
+    bottom: 100px;
+}
+.splash h1
+{
+    font-size: 2.5em;
+    font-weight: 700;
+    text-shadow: 1px 1px 5px #000;
+    
+}
+.glyphicon-chevron-left:before {
+    content: none;
+}
+.glyphicon-chevron-right:before
+{
+    content: none;
+}
+.carousel-caption {
+    bottom: 100px;
+}
+.btn-add-detail
+{
+    padding: 15px 20px;
+    border: 1px solid #cdbc7a;
+    background: #000e22;
+    right: 100px;
+    line-height: 16px;
+    color: #cdbc7a!important;
+    letter-spacing: .2em;
+    align-items: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.p-y-1
+{
+    padding-top: 1.5rem!important;
+    padding-bottom: 1.5rem!important;
+    margin-left: -25px;
+    margin-right: -25px;
+}
+.padleft-right{
+    padding-left: 5px;
+    padding-right: 0px;
+}
+
+[class*=" imghvr-"] figcaption, [class^="imghvr-"] figcaption {
+    background-color: #00081c;
+}
+[class*=" imghvr-"], [class^="imghvr-"] {
+    background-color: #00081c;
+    color: #fff;
+}
+.title-text-center
+{
+    text-align: center;
+    color: #00081c;
+    font-size: 18px;
+    letter-spacing: .4em;
+    margin-right: -.4em;
+    margin-bottom: 10px;
+    padding: 0 20px;
+    text-transform: uppercase;
+}
+.mouse {
+    width: 25px;
+    height: 45px;
+    border: 2px solid #000e22;
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    margin-left: -12.5px;
+    border-radius: 12px;
+}
+.mouse:after {
+    content: "";
+    position: absolute;
+    height: 5px;
+    width: 5px;
+    background-color: #000e22;
+    border-radius: 100%;
+    left: 50%;
+    top:10px;
+    margin-left: -2.5px;
+    transition:all 0.3s ease-in;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+.pm-staff-profile-image{
+    width: 200px;
+    height: 200px;
+    background-color: #C6C6C6;
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 10px;
+  }

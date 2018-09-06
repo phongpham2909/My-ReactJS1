@@ -1,0 +1,30 @@
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover
+{
+    background-color: #0275d8;
+    cursor: default;
+}
+.dropdown-menu>li>a:hover
+{
+    background-color: #0275d8;
+    color: #ffffff;
+}
+.dropdown-menu
+{
+    min-width: 190px;
+}
+
+@media (min-width: 768px)
+{
+.navbar {
+    border-radius: 0px;
+}
+}
+.navbar-brand
+{
+    color: #cdbc7a !important;
+}
+.navbar-inverse 
+{
+    background-color: #000e22;
+    border-color: #000e22;
+}

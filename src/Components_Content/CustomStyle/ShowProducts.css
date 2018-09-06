@@ -1,0 +1,11 @@
+.list-group-item:first-child {
+    border-top-right-radius: 0px;
+}
+.list-group-item.active:hover
+{
+    z-index: 2;
+    color: #fff;
+    text-decoration: none;
+    background-color: #0275d8;
+    border-color: #0275d8;
+}
